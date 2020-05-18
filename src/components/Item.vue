@@ -3,7 +3,7 @@
     <img class="block col-span-3 w-full h-20 rounded bg-gray-600" src alt />
     <div class="col-span-5">
       <div class="flex">
-        <h6 class="text-sm font-semibold text-gray-800 flex-grow">Item title</h6>
+        <h6 class="text-sm font-semibold text-gray-800 flex-grow">{{ item.title }}</h6>
         <button>
           <svg class="w-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
             <path
@@ -14,14 +14,17 @@
       </div>
       <p
         class="text-xs truncate text-gray-600"
-      >Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe vero possimus repellat nam nisi odit aspernatur fugiat, neque praesentium id, commodi voluptate a error qui, debitis at eveniet ratione nemo!n</p>
-      <span class="text-sm text-gray-800">USD 10</span>
+      >{{item.description}}</p>
+      <span class="text-sm text-gray-800">{{ item.price }} USD</span>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Item"
+  name: "Item",
+  props: {
+    item: Object
+  }
 };
 </script>
