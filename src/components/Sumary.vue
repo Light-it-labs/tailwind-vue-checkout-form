@@ -17,10 +17,5 @@ export default {
   components: {
     Item
   },
-  data() {
-    return {
-
-    };
-  }
 };
 </script>
