@@ -12,7 +12,7 @@ import Item from "./Item";
 export default {
   name: "Sumary",
   props: {
-    items: Object
+    items: Array
   },
   components: {
     Item
