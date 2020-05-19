@@ -1,4 +1,4 @@
-# tailwind-checkout
+# tailwind-vue-checkout-form
 
 ## Project setup
 ```
