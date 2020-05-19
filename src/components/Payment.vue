@@ -95,7 +95,7 @@
     <span class="text-right font-bold">{{ total }} USD</span>
    </div>
    <div>
-    <button
+    <button @click="finishPayment"
      class="w-full text-ceenter px-4 py-3 bg-blue-500 rounded-md shadow-md text-white font-semibold"
     >
      Confirm payment
@@ -298,6 +298,9 @@ export default {
       } else {
         this.unMaskCardNumber();
       }
+    },
+    finishPayment() {
+      this.$emit('change-parent');
     }
   }
 };

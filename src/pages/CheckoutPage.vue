@@ -1,19 +1,22 @@
 <template>
   <div class="container mx-auto px-6 lg:pt-12 lg:px-20 grid grid-cols-1 lg:grid-cols-10 col-gap-10 row-gap-10 pb-8 lg:pb-24">
-    <Payment :total="total"></Payment>
+    <Payment @change-parent="handleAlert" :total="total"></Payment>
     <Sumary :items="items"></Sumary>
+    <Alert :visible="alertVisible" position="top-right" color="success" title="Success" description="Your payment has been successfully processed." />
   </div>
 </template>
 
 <script>
 import Payment from "../components/Payment";
 import Sumary from "../components/Sumary";
+import Alert from "../components/Alert";
 
 export default {
   name: "CheckoutPage",
   components: {
     Payment,
-    Sumary
+    Sumary,
+    Alert
   },
   data() {
     return {
@@ -34,6 +37,7 @@ export default {
           price: 150
         }
       ],
+      alertVisible: false,
       total: 0
     };
   },
@@ -45,6 +49,12 @@ export default {
       items.forEach(item => {
         this.total += item.price;
       });
+    },
+    handleAlert() {
+      this.alertVisible = true;
+      setTimeout(() => {
+        this.alertVisible = false;
+      }, 4000);
     }
   }
 };

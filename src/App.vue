@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="bg-gray-200">
-    <CheckoutPage></CheckoutPage>
+    <CheckoutPage/>
   </div>
 </template>
 
