@@ -300,12 +300,12 @@ export default {
       }
     },
     finishPayment() {
-      this.$emit('change-parent');
+      this.$emit("change-parent");
     }
   }
 };
 </script>
 
 <style lang="scss">
-@import "../assets/style.scss";
+@import "../assets/scss/card-component.scss";
 </style>
