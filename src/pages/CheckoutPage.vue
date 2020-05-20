@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto px-6 lg:pt-12 lg:px-20 grid grid-cols-1 lg:grid-cols-10 col-gap-10 row-gap-10 pb-8 lg:pb-24">
+  <div class="container mx-auto px-6 lg:pt-12 lg:px-20 grid grid-cols-1 lg:grid-cols-10 col-gap-10 row-gap-10 pb-8 lg:pb-24 bg-gray-200">
     <Payment @change-parent="handleAlert" :total="total"></Payment>
     <Sumary :items="items"></Sumary>
     <Alert :visible="alertVisible" position="top-right" color="success" title="Success" description="Your payment has been successfully processed." />
