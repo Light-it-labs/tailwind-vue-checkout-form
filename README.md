@@ -1,6 +1,10 @@
 # tailwind-vue-checkout-form
+Result:
 
 ![alt text](./public/images/1.png)
+
+or:
+
 ![alt text](./public/images/2.png)
 
 ## Project setup
