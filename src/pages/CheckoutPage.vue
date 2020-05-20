@@ -1,6 +1,6 @@
 <template>
-  <div class="container mx-auto px-6 lg:pt-12 lg:px-20 grid grid-cols-1 lg:grid-cols-10 col-gap-10 row-gap-10 pb-8 lg:pb-24 bg-gray-200">
-    <Payment @change-parent="handleAlert" :total="total"></Payment>
+  <div :class="isCard ? '' : 'lg:h-screen'" class="container mx-auto p-6 grid grid-cols-1 row-gap-12 lg:grid-cols-10 lg:col-gap-10 lg:pt-12">
+    <Payment @handle-card="handleCard" @change-parent="handleAlert" :total="total"></Payment>
     <Sumary :items="items"></Sumary>
     <Alert :visible="alertVisible" position="top-right" color="success" title="Success" description="Your payment has been successfully processed." />
   </div>
@@ -38,7 +38,8 @@ export default {
         }
       ],
       alertVisible: false,
-      total: 0
+      total: 0,
+      isCard: false
     };
   },
   mounted() {
@@ -55,6 +56,9 @@ export default {
       setTimeout(() => {
         this.alertVisible = false;
       }, 4000);
+    },
+    handleCard() {
+      this.isCard = true;
     }
   }
 };
